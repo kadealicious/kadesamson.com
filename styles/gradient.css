@@ -17,13 +17,12 @@
 .gradient {
     position:absolute;
     z-index:-1;
-    overflow:hidden;
     
     --size: 700px;
     --speed: 50s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-    width: var(--size);
-    height: var(--size);
+    width: clamp(var(--size), var(--size), 100vw);
+    height: clamp(var(--size), var(--size), 100vh);
     filter: blur(calc(var(--size) / 5));
     background-image: linear-gradient(#37eba9, #5b37eb);
     animation: rotate var(--speed) var(--easing) alternate infinite;

@@ -23,7 +23,7 @@
     --speed: 10s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
     width: clamp(var(--size), var(--size), 100vw);
-    height: clamp(var(--size), var(--size), 100vh);
+    height: clamp(var(--size), var(--size), 100%);
     filter: blur(calc(var(--size) / 5));
     background-image: linear-gradient(#37eba9, #5b37eb);
     animation:rotate var(--speed) var(--easing) alternate infinite;

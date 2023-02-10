@@ -24,8 +24,8 @@
 /* Structural elements */
 body {
     margin:0 auto;
-    width:100vw;
-    min-height:100vh;
+    width:clamp(fit-content, 100%, 100vw);
+    height:clamp(fit-content, fit-content, 100vh);
     
     display:flex;
     flex-direction:column;

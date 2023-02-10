@@ -50,16 +50,14 @@ header, section, footer {
     margin:2vh;
 }
 header {
-    margin-top:6vh;
-    
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
 }
-@media (max-width: 720px) {
+@media (min-width: 720px) {
     header {
-        margin-top:2vh;
+        margin-top:6vh;
     }
 }
 footer {

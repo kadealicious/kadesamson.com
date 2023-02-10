@@ -29,17 +29,15 @@ body {
     
     display:flex;
     flex-direction:column;
-    justify-content:baseline;
+    place-content:center;
+    align-items:center;
     
     text-align:center;
     
     background-color:var(--dark-bgcolor);
-    position:absolute;
-    inset:0;
-    display:flex;
-    place-content:center;
-    align-items:center;
+    position:fixed;
     overflow:hidden;
+    inset:0;
     
     /* background-image:url("img/jellyfishblurred.jpg");
     background-repeat:no-repeat;

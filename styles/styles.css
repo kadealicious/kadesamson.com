@@ -57,6 +57,11 @@ header {
     justify-content:center;
     align-items:center;
 }
+@media (max-width: 720px) {
+    header {
+        margin-top:2vh;
+    }
+}
 footer {
     position:absolute;
     bottom:0;

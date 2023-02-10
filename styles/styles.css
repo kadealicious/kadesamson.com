@@ -25,7 +25,7 @@
 body {
     margin:0 auto;
     width:100vw;
-    min-height:100vh;
+    min-height:clamp(fit-content, 100vh, 100vh);
     
     display:flex;
     flex-direction:column;
@@ -102,6 +102,9 @@ header>img:hover {
 @media (max-width: 720px) {
     header>img {
         width:35vw;
+   }
+   .icon {
+        width:3em;
    }
 }
 

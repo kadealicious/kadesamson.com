@@ -1,0 +1,111 @@
+/* Reset & styling variables */
+* {
+    margin:0;
+    padding:0;
+    
+    /* border:0.1em solid #000000; */
+    box-sizing:border-box;
+    
+    font-family:"Cabin";
+    color:var(--light-textcolor0);
+    
+    /* Color variables */
+    /* Dark theme */
+    --dark-textcolor0:#ffffff;
+    --dark-textcolor1:#cccccc;
+    --dark-bgcolor:#111111;
+    
+    /* Light theme */
+    --light-textcolor0:#111111;
+    --light-textcolor1:#222222;
+    --light-bgcolor:#ffffff;
+}
+
+/* Structural elements */
+body {
+    margin:0 auto;
+    width:100vw;
+    min-height:100vh;
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:baseline;
+    
+    text-align:center;
+    
+    /* background-image:url("img/jellyfishblurred.jpg");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover; */
+}
+header, section, footer {
+    margin:2vh;
+}
+header {
+    margin-top:6vh;
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+footer {
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
+/* Text elements */
+a {
+    transform:scale(1);
+    transition:all cubic-bezier(.61,-0.26,0,1.5) 0.3s;
+}
+a:hover {
+    font-size:125%;
+}
+ul {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    
+    list-style:none;
+}
+li {
+    margin:1em;
+}
+
+
+/* Image elements */
+.icon {
+    width:5em;
+}
+header>img, .icon {
+    border-radius:100%;
+    
+    transition:all cubic-bezier(.61,-0.26,0,1.5) 0.3s;
+}
+header>img {
+    width:15vw;
+    margin-bottom:4vh;
+    
+    box-shadow:0.5em 0.5em 1em 0.2em #000000;
+}
+header>img:hover {
+    box-shadow:0.5em 0.5em 4em 0.1em #000000;
+}
+header>img:hover {
+    transform:scale(1.15);
+}
+.icon:hover {
+    transform:scale(1.5);
+}
+@media (max-width: 720px) {
+    header>img {
+        width:35vw;
+   }
+}
+
+/* Style elements */
+hr {
+    border:0.1em solid #000000;
+}

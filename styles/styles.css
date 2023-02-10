@@ -39,7 +39,7 @@ body {
     display:flex;
     place-content:center;
     align-items:center;
-    overflow-x:hidden;
+    overflow:hidden;
     
     /* background-image:url("img/jellyfishblurred.jpg");
     background-repeat:no-repeat;

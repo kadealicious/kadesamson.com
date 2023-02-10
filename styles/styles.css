@@ -25,13 +25,21 @@
 body {
     margin:0 auto;
     width:100vw;
-    min-height:clamp(fit-content, 100vh, 100vh);
+    min-height:100vh;
     
     display:flex;
     flex-direction:column;
     justify-content:baseline;
     
     text-align:center;
+    
+    background-color:var(--dark-bgcolor);
+    position:absolute;
+    inset:0;
+    display:flex;
+    place-content:center;
+    align-items:center;
+    overflow-x:hidden;
     
     /* background-image:url("img/jellyfishblurred.jpg");
     background-repeat:no-repeat;

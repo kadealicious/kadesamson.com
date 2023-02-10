@@ -16,26 +16,18 @@
 }
 .gradient {
     position:absolute;
+    overflow:hidden;
     z-index:-1;
     
     --size: 700px;
     --speed: 50s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-    width: clamp(var(--size), var(--size), 100vw);
-    height: clamp(var(--size), var(--size), 100vh);
+    width: clamp(var(--size), var(--size), 100%);
+    height: clamp(var(--size), var(--size), 100%);
     filter: blur(calc(var(--size) / 5));
     background-image: linear-gradient(#37eba9, #5b37eb);
     animation: rotate var(--speed) var(--easing) alternate infinite;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-}
-body {
-    background-color: #111111;
-    position: absolute;
-    inset: 0;
-    display: flex;
-    place-content: center;
-    align-items: center;
-    overflow: hidden;
 }
 /* This is just to transition when you change the viewport size. */
 * {

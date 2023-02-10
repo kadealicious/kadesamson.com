@@ -17,6 +17,7 @@
 .gradient {
     position:absolute;
     z-index:-1;
+    overflow:hidden;
     
     --size: 700px;
     --speed: 50s;

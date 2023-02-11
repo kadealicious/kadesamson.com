@@ -25,7 +25,7 @@
     width: clamp(var(--size), var(--size), 100vw);
     height: clamp(var(--size), var(--size), 100%);
     filter: blur(calc(var(--size) / 5));
-    background-image: linear-gradient(#37eba9, #5b37eb);
+    background-image: linear-gradient(var(--accentcolor0), var(--accentcolor1));
     animation:rotate var(--speed) var(--easing) alternate infinite;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }

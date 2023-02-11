@@ -6,19 +6,22 @@
     /* border:0.1em solid #000000; */
     box-sizing:border-box;
     
-    font-family:"Cabin";
-    color:var(--light-textcolor0);
+    font-family:"Roboto Condensed", sans-serif;
     
     /* Color variables */
     /* Dark theme */
-    --dark-textcolor0:#ffffff;
-    --dark-textcolor1:#cccccc;
-    --dark-bgcolor:#111111;
+    --textcolor0:#ffffff;
+    --textcolor1:#fabbb7;
     
-    /* Light theme */
-    --light-textcolor0:#111111;
-    --light-textcolor1:#222222;
-    --light-bgcolor:#ffffff;
+    --bgcolor0:#28162b;
+    --bgcolor1:#29153f;
+    
+    --accentcolor0:#5941a9;
+    --accentcolor1:#20246d;
+}
+::selection {
+    color:var(--accentcolor1);
+    background-color:var(--textcolor1);
 }
 
 /* Structural elements */
@@ -34,7 +37,9 @@ body {
     
     text-align:center;
     
-    background-color:var(--dark-bgcolor);
+    color:var(--textcolor0);
+    background-color:var(--bgcolor0);
+    
     position:fixed;
     overflow:hidden;
     inset:0;
@@ -66,10 +71,13 @@ footer {
 
 /* Text elements */
 a {
+    color:var(--textcolor0);
+    
     transform:scale(1);
     transition:all cubic-bezier(.61,-0.26,0,1.5) 0.3s;
 }
 a:hover {
+    color:var(--textcolor1);
     font-size:125%;
 }
 ul {
@@ -87,6 +95,8 @@ li {
 /* Image elements */
 .icon {
     width:5em;
+    
+    fill:var(--textcolor0);
 }
 header>img, .icon {
     border-radius:100%;
@@ -106,7 +116,8 @@ header>img:hover {
     transform:scale(1.15);
 }
 .icon:hover {
-    transform:scale(1.5);
+    fill:var(--textcolor1);
+    transform:scale(1.25);
 }
 @media (max-width: 720px) {
     header>img {

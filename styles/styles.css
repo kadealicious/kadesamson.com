@@ -28,7 +28,7 @@
 body {
     margin:0 auto;
     width:clamp(fit-content, 100%, 100vw);
-    height:100vh;
+    height:clamp(100%, 100%, 100vh);
     
     display:flex;
     flex-direction:column;

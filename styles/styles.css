@@ -89,12 +89,16 @@ ul {
 }
 li {
     margin:1em;
+    width:5em;
+    height:5em;
 }
 
 
 /* Image elements */
 .icon {
-    width:5em;
+    display:block;
+    margin:-1.5em auto;
+    width:100%;
     
     fill:var(--textcolor0);
 }
@@ -123,8 +127,11 @@ header>img:hover {
     header>img {
         width:35vw;
    }
+   li {
+        margin:0.5em;
+   }
    .icon {
-        width:3em;
+        width:4em;
    }
 }
 

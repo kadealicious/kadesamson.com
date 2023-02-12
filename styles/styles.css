@@ -83,7 +83,7 @@ a:hover {
 ul {
     display:flex;
     flex-direction:row;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
     
     list-style:none;
 }
@@ -128,9 +128,6 @@ header>img:hover {
    }
    li {
         margin:0.5em;
-   }
-   .icon {
-        width:3em;
    }
 }
 

@@ -3,6 +3,9 @@ html {
     scroll-behavior:smooth;
     scroll-padding-top:20vh;
     scroll-snap-type:y proximity;
+    
+    overflow-x:hidden;
+    overflow-y:scroll;
 }
 * {
     margin:0;
@@ -50,7 +53,7 @@ body {
     text-shadow:0.2em 0.2em 0.5em #000000;
     
     overflow-x:hidden;
-    overflow-y:scroll;
+    overflow-y:hidden;
     
     background-color:var(--bgcolor0);
 }

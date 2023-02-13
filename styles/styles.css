@@ -55,8 +55,7 @@ body {
     color:var(--textcolor0);
     text-shadow:0.2em 0.2em 0.5em #000000;
     
-    overflow-x:hidden;
-    overflow-y:hidden;
+    overflow:hidden;
     
     background-color:var(--bgcolor0);
 }
@@ -262,7 +261,7 @@ img.porthole {
 }
 img.waves {
     position:absolute;
-    left:-1em;
+    left:0;
 }
 span.waves {
     width:100vh;

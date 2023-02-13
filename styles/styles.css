@@ -260,6 +260,7 @@ img.porthole {
     border-radius:100%;
 }
 img.waves {
+    position:absolute;
     left:0;
 }
 span.waves {

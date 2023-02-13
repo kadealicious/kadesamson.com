@@ -205,10 +205,21 @@ hr {
     
     border:0;
 }
-@keyframes infscroll {
+@keyframes infscroll-rtol {
     0%      {transform:translateX(500%);}
     100%    {transform:translateX(-500%);}
 }
+@keyframes infscroll-ltor {
+    0%      {transform:translateX(-500%);}
+    100%    {transform:translateX(500%);}
+}
+hr.clownfish::after {content:"🐠";}
+hr.crab::after      {content:"🦀";animation:infscroll-ltor 5s infinite;}
+hr.octopus::after   {content:"🐙";animation:infscroll-ltor 5s infinite;}
+hr.dolphin::after   {content:"🐬";}
+hr.whale::after     {content:"🐳";}
+hr.pufferfish::after{content:"🐡";}
+hr.squid::after     {content:"🦑";animation:infscroll-ltor 5s infinite;}
 hr::after {
     content: '🐟';
     position:absolute;
@@ -216,8 +227,9 @@ hr::after {
     /* Ratio -> font-size/letter-spacing = 6.25 */
     letter-spacing: -9.6px;
     font-size: 60px;
+    padding:2em auto;
     
-    animation:infscroll 5s infinite;
+    animation:infscroll-rtol 5s infinite;
     animation-play-state:running;
     -webkit-animation-timing-function:linear;
     animation-timing-function:linear;

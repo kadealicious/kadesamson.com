@@ -5,6 +5,7 @@ html {
     scroll-snap-type:y proximity;
     
     scrollbar-gutter:stable both-edges;
+    -webkit-overflow-scrolling:touch;
     
     overflow-x:hidden;
     overflow-y:scroll;
@@ -261,7 +262,7 @@ img.porthole {
 }
 img.waves {
     position:absolute;
-    left:0;
+    left:-1em;
 }
 span.waves {
     width:100vh;

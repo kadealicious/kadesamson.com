@@ -4,6 +4,8 @@ html {
     scroll-padding-top:20vh;
     scroll-snap-type:y proximity;
     
+    scrollbar-gutter:stable both-edges;
+    
     overflow-x:hidden;
     overflow-y:scroll;
 }

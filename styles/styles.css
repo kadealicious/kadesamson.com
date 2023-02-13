@@ -67,9 +67,12 @@ body {
     align-items:center;
     
     width:100%;
-    /* Why do I need this?  Who knows! */
-    padding-left:2em;
     height:fit-content;
+}
+@media (min-width:720px) {
+    .flexparent {
+        padding-left:2em;
+    }
 }
 header, section, footer {
     padding:2vh;
@@ -183,7 +186,6 @@ li.flexbreak {
 }
 @media (max-width:720px) {
     .headshot {
-        margin-top:5vh;
         width:45vw;
    }
    li {

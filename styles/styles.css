@@ -48,10 +48,8 @@ body {
     position:fixed;
     
     scroll-behavior:smooth;
-    /*
     scroll-padding-top:25vh;
-    scroll-snap-type:y proximity;
-    */
+    /* scroll-snap-type:y proximity; */
     
     scroll-behavior:smooth;
     -webkit-overflow-scrolling:touch;

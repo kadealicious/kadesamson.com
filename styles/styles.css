@@ -48,7 +48,7 @@ body {
     position:fixed;
     
     scroll-behavior:smooth;
-    scroll-padding-top:25vh;
+    scroll-padding-top:18vh;
     /* scroll-snap-type:y proximity; */
     
     scroll-behavior:smooth;
@@ -288,8 +288,11 @@ span.waves {
     filter:url("#turbulence");
 }
 
-/* Portfolio stuff */
-img.portfolioitem {
-    padding:1em 0;
+/* Image styling */
+img.portfolioitem, img.bioimg {
+    margin:1em 0;
     width:30vh;
+    
+    border-radius:2em;
+    box-shadow:0.2em 0.2em 0.5em #000000;
 }

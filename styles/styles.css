@@ -1,14 +1,8 @@
 /* Reset & styling variables */
 html {
-    scroll-behavior:smooth;
-    scroll-padding-top:20vh;
-    scroll-snap-type:y proximity;
-    
-    scrollbar-gutter:stable both-edges;
-    -webkit-overflow-scrolling:touch;
-    
-    overflow-x:hidden;
-    overflow-y:scroll;
+    width:100%;
+    height:100%;
+    overflow:hidden;
 }
 * {
     margin:0;
@@ -41,26 +35,44 @@ html {
 
 /* Structural elements */
 body {
-    margin:0 auto;
-    width:clamp(fit-content, 100%, 100vw);
-    min-height:100%;
-    height:fit-content;
-    
-    display:flex;
-    flex-direction:column;
-    place-content:center;
-    align-items:center;
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
     
     text-align:center;
     color:var(--textcolor0);
     text-shadow:0.2em 0.2em 0.5em #000000;
     
-    overflow:hidden;
+    
+    position:fixed;
+    
+    scroll-behavior:smooth;
+    scroll-padding-top:25vh;
+    scroll-snap-type:y proximity;
+    
+    scroll-behavior:smooth;
+    -webkit-overflow-scrolling:touch;
+    
+    overflow-x:hidden;
+    overflow-y:scroll;
+    
     
     background-color:var(--bgcolor0);
 }
+.flexparent {
+    display:flex;
+    flex-direction:column;
+    place-content:baseline;
+    align-items:center;
+    
+    width:100%;
+    /* Why do I need this?  Who knows! */
+    padding-left:2em;
+    height:fit-content;
+}
 header, section, footer {
-    margin:2vh;
+    padding:2vh;
     
     scroll-snap-align:start;
 }
@@ -76,8 +88,8 @@ header {
 }
 section {
     max-width:65vh;
-    min-height:65vh;
-    height:clamp(65vh, 100%, 100%);
+    min-height:55vh;
+    height:100%;
     
     display:flex;
     flex-direction:column;
@@ -89,6 +101,9 @@ footer {
 }
 
 /* Text elements */
+#bio, #portfolio, #contact {
+    margin:1em auto 0.5em auto;
+}
 a, .calltoaction {
     color:var(--textcolor0);
     display:inline-block;
@@ -168,6 +183,7 @@ li.flexbreak {
 }
 @media (max-width:720px) {
     .headshot {
+        margin-top:5vh;
         width:45vw;
    }
    li {
@@ -181,8 +197,10 @@ br {
     -moz-user-select:none;
 }
 hr {
+    display:block;
     width:100vh;
     height:10vh;
+    
     border:0;
 }
 @keyframes infscroll {

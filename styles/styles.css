@@ -205,13 +205,25 @@ hr {
     
     border:0;
 }
+@media screen and (min-width:2000px) {
+	hr {
+		--fish_position_left:-800%;
+		--fish_position_right:800%;
+	}
+}
+@media screen and (max-width:2000px) {
+	hr {
+		--fish_position_left:-700%;
+		--fish_position_right:500%;
+	}
+}
 @keyframes infscroll-rtol {
-    0%      {transform:translateX(500%);}
-    100%    {transform:translateX(-500%);}
+    0%      {transform:translateX(var(--fish_position_right));}
+    100%    {transform:translateX(var(--fish_position_left));}
 }
 @keyframes infscroll-ltor {
-    0%      {transform:translateX(-500%);}
-    100%    {transform:translateX(500%);}
+    0%      {transform:translateX(var(--fish_position_left));}
+    100%    {transform:translateX(var(--fish_position_right));}
 }
 hr.clownfish::after {content:"🐠";}
 hr.crab::after      {content:"🦀";animation:infscroll-ltor 5s infinite;}

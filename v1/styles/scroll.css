@@ -1,0 +1,56 @@
+.scroll {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+
+    width: fit-content;
+    min-width:18vw;
+    height: 50vh;
+    min-height: 25vw;
+    
+    background-image: url("../img/scrolls/scroll-bottom.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.scroll>* {
+    padding: 0.4em;
+}
+
+.scroll>p {
+    margin-bottom: 0.4em;
+}
+h1, h2, #navbar {
+    padding: 0.2em;
+    margin-bottom:0.4em;
+    text-align: center;
+    
+    background-image: url("../img/scrolls/scroll-top.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    box-shadow: 0 0.4em 0.2em -0.2em var(--textcolor1);
+}
+li>h2 {
+    margin-bottom: 0;
+}
+
+figure {
+    width: 100%;
+
+    background-image: url("../img/scrolls/scroll-bottom.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+figure>* {
+    padding: 0.4em;
+}
+
+figure>img {
+    width: 100%;
+}

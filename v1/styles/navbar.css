@@ -1,0 +1,12 @@
+#navbar, .sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#navparent {
+    height: 100vh;
+    position:static;
+    top:0;
+}

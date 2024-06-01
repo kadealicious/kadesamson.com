@@ -1,0 +1,243 @@
+/* Reset & styling variables */
+html {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+* {
+    margin:0;
+    padding:0;
+    
+    z-index:0;
+    
+    /* border:0.1em solid #000000; */
+    box-sizing:border-box;
+    
+    font-family:'MedievalSharp', cursive;
+    font-weight:300;
+    
+    /* Color variables */
+    /* Dark theme */
+    --textcolor0:#000000;
+    --textcolor1:#333333;
+    
+    --bgcolor0:#ffffff;
+    --bgcolor1:#bbbbbb;
+    --bgcolor2:#888888;
+    
+    --accentcolor0:#ffff00;
+    --accentcolor1:#bbbb66;
+}
+::selection {
+    color:var(--accentcolor1);
+    background-color:var(--textcolor1);
+}
+
+/* Structural elements */
+body {
+    width:100%;
+    height:100%;
+	
+	position:fixed;
+	text-align:center;
+	
+    color:var(--textcolor0);
+	background-color:var(--bgcolor0);
+	background-image:url("../img/parchment.jpg");
+    
+    scroll-behavior:smooth;
+    scroll-padding-top:18vh;
+    /* scroll-snap-type:y proximity; */
+    
+    scroll-behavior:smooth;
+    -webkit-overflow-scrolling:touch;
+    
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+.flexparent {
+    display:flex;
+    flex-direction:column;
+    place-content:baseline;
+    align-items:center;
+    
+    width:100%;
+    height:fit-content;
+}
+header, section, footer {
+    padding:2vh;
+    
+    scroll-snap-align:start;
+}
+header {
+    width:100%;
+    height:95vh;
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:end;
+    align-items:left;
+	
+	text-align:left;
+	
+	background-image:url("../img/knight-splash.png");
+	background-position:center;
+	background-size:cover;
+}
+section {
+    /* min-height:55vh; */
+    height:100%;
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+footer {
+    padding:0.4em 0 0.2em 0;
+}
+
+/* Text elements */
+#bio, #portfolio, #contact {
+    margin:1em auto 0.5em auto;
+}
+.bioimg {
+	width:45vh;
+	margin:2em;
+}
+.blurb {
+	width:fit-content;
+	padding:7em 5em 3em 5em;
+	
+	background-image:url("../img/scroll.png");
+	background-position:center;
+	background-size:cover;
+}
+a, .calltoaction {
+    color:var(--textcolor0);
+    display:inline-block;
+    
+    transform:scale(1);
+    transition:all cubic-bezier(.61,-0.26,0,1.5) 0.3s;
+}
+.calltoaction {
+    padding:0.25em;
+    
+    font-weight:700;
+    
+    background-image:url("../img/riot.png");
+    background-position:0 5em;
+	background-repeat:no-repeat;
+    background-size:100%;
+    transition-duration:1s;
+}
+a:hover {
+    color:var(--textcolor1);
+    transform:scale(1.2);
+}
+.calltoaction:hover {
+	padding:2em 0.5em 0.25em 0.5em;
+	
+    background-position:0 0.15em;
+
+    color:var(--accentcolor1);
+    text-shadow:none;
+}
+
+ul {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:left;
+    align-items:center;
+	gap:1em;
+    
+    list-style:none;
+}
+li {
+    width:fit-content;
+}
+li.flexbreak {
+    flex-basis:100%;
+    height:0;
+    margin:0;
+}
+
+
+/* Image elements */
+.icon {
+    width:100%;
+    height:100%;
+    
+    fill:var(--textcolor0);
+}
+.headshot, .icon {
+    border-radius:100%;
+    
+    transition:all cubic-bezier(.61,-0.26,0,1.5) 0.3s;
+}
+.headshot {
+    width:15vw;
+    margin-bottom:4vh;
+    
+    box-shadow:0.5em 0.5em 1em 0.2em #000000;
+}
+.headshot:hover {
+    box-shadow:0.5em 0.5em 4em 0.1em #000000;
+}
+.headshot:hover {
+    transform:scale(1.15);
+}
+.icon:hover {
+    fill:var(--textcolor1);
+    transform:scale(1.25);
+}
+@media (max-width:720px) {
+    .headshot {
+        width:45vw;
+   }
+   li {
+        margin:0.5em;
+   }
+}
+
+/* Style elements */
+br {
+    user-select:none;
+    -moz-user-select:none;
+}
+hr {
+    display:block;
+    width:100vw;
+    height:10vh;
+    
+    border:0;
+	
+	background-image:url("../img/brix.jpg");
+	background-repeat:repeat;
+	background-position-x:left;
+	box-shadow:0 0 1em 0.1em #000000;
+}
+
+.nodecor {
+    text-decoration:none;
+}
+
+/* Animated arrows */
+@keyframes pulse {
+    0%      {transform:scale(1.0);}
+    33%     {transform:scale(1.4);}
+    66%     {transform:scale(1.0);}
+    100%    {transform:scale(1.0);}
+}
+.animpulse {
+    animation:pulse 2s infinite;
+    animation-play-state:running;
+    -webkit-animation-timing-function:ease-in-out;
+    animation-timing-function:ease-in-out;
+	width:fit-content;
+}
+.animpulse:hover {
+    animation-play-state:paused;
+    transform:scale(1.4);
+}

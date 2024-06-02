@@ -1,0 +1,21 @@
+.textswitch::before {
+    content: "Software Developer";
+    animation: changeword 6s infinite steps(4);
+    color: #f22800;
+    text-shadow: 0 0 0.2em #3c0a00;
+}
+
+@keyframes changeword {
+    0% {
+        content: "Software Developer";
+    }
+    25% {
+        content: "Audio Engineer";
+    }
+    50% {
+        content: "Musician";
+    }
+    75% {
+        content: "Galliant Knight";
+    }
+}

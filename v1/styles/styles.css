@@ -1,0 +1,147 @@
+/* Styling variables */
+* {
+    font-family: 'MedievalSharp', cursive;
+    font-weight: 300;
+
+    /* Color variables */
+    --textcolor0: #000000;
+    --textcolor1: #333333;
+
+    --bgcolor0: #dcdec1;
+    --bgcolor1: #abac91;
+    --bgcolor2: #888888;
+
+    --accentcolor0: #ffff00;
+    --accentcolor1: #bbbb66;
+}
+
+::selection {
+    color: var(--accentcolor1);
+    background-color: var(--textcolor1);
+}
+
+/* Structural elements */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5vh;
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+
+    max-width:100vh;
+    min-width: 50vw;
+    height: fit-content;
+    margin:auto;
+    border:1px solid black;
+
+    color: var(--textcolor0);
+    background-color: var(--bgcolor0);
+}
+
+header,
+section,
+footer {
+    width: 100%;
+    padding: 2vh;
+    scroll-snap-align: start;
+}
+
+header {
+    height: 90vh;
+    margin-bottom: 2vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: left;
+
+    text-align: left;
+
+    background-image: url("../img/knight-splash.webp");
+    background-position: center;
+    background-size: cover;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    text-align: center;
+}
+
+code {
+    font-family: Consolas;
+}
+
+h1, h2, h2>a {
+    font-weight: bold;
+}
+h1:not(.nowide), h2:not(.nowide) {
+    width: 100%;
+}
+
+a {
+    color: var(--textcolor0);
+    display: inline-block;
+
+    transform: scale(1);
+    transition: all cubic-bezier(.61, -0.26, 0, 1.5) 0.3s;
+}
+a:hover {
+    transform: scale(1.2);
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    list-style: none;
+}
+li {
+    width: fit-content;
+    margin: 0.5em;
+}
+li.flexbreak {
+    flex-basis: 100%;
+    height: 0;
+    margin: 0;
+}
+
+
+/* Image elements */
+.icon {
+    width: 100%;
+    height: 100%;
+
+    fill: var(--textcolor0);
+    border-radius: 100%;
+    transition: all cubic-bezier(.61, -0.26, 0, 1.5) 0.3s;
+}
+
+/* Style elements */
+br {
+    user-select: none;
+    -moz-user-select: none;
+}
+
+hr {
+    display: block;
+    width: 50vw;
+    border:0.1em solid var(--bgcolor1);
+}
+
+.nodecor {
+    text-decoration: none;
+}

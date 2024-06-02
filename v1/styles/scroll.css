@@ -5,7 +5,7 @@
     justify-content: baseline;
 
     width: fit-content;
-    min-width:18vw;
+    min-width:16em;
     height: 50vh;
     min-height: 25vw;
     
@@ -14,14 +14,13 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 .scroll>* {
     padding: 0.4em;
 }
-
 .scroll>p {
     margin-bottom: 0.4em;
 }
+
 h1, h2, #navbar {
     padding: 0.2em;
     margin-bottom:0.4em;
@@ -32,6 +31,7 @@ h1, h2, #navbar {
     background-size: cover;
     background-repeat: no-repeat;
     
+    border: 1px solid black;
     box-shadow: 0 0.4em 0.2em -0.2em var(--textcolor1);
 }
 li>h2 {

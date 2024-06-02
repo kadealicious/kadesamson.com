@@ -9,7 +9,7 @@
 
     --bgcolor0: #dcdec1;
     --bgcolor1: #abac91;
-    --bgcolor2: #888888;
+    --bgcolor2: #4b4b40;
 
     --accentcolor0: #ffff00;
     --accentcolor1: #bbbb66;
@@ -36,10 +36,12 @@ body {
     min-width: 50vw;
     height: fit-content;
     margin:auto;
-    border:1px solid black;
-
+    
     color: var(--textcolor0);
     background-color: var(--bgcolor0);
+    
+    border-left:0.2em solid var(--bgcolor1);
+    border-right:0.2em solid var(--bgcolor1);
 }
 
 header,
@@ -125,7 +127,7 @@ li.flexbreak {
     width: 100%;
     height: 100%;
 
-    fill: var(--textcolor0);
+    fill: var(--bgcolor2);
     border-radius: 100%;
     transition: all cubic-bezier(.61, -0.26, 0, 1.5) 0.3s;
 }
@@ -138,7 +140,7 @@ br {
 
 hr {
     display: block;
-    width: 50vw;
+    width: 100%;
     border:0.1em solid var(--bgcolor1);
 }
 

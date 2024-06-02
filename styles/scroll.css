@@ -5,9 +5,8 @@
     justify-content: baseline;
 
     width: fit-content;
-    min-width:16em;
-    height: 50vh;
-    min-height: 25vw;
+    min-width: 16em;
+    min-height: 21.5em;
     
     background-image: url("../img/scrolls/scroll-bottom.png");
     background-position: center;
@@ -19,6 +18,13 @@
 }
 .scroll>p {
     margin-bottom: 0.4em;
+}
+
+.scroll>ul {
+    gap: 0;
+}
+.scroll>ul>li {
+    width: 2em;
 }
 
 h1, h2, #navbar {

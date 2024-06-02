@@ -23,7 +23,7 @@
 /* Structural elements */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5vh;
+    scroll-padding-top: 5em;
     -webkit-overflow-scrolling: touch;
 }
 

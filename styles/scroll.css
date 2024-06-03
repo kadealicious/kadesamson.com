@@ -6,15 +6,20 @@
 
     width: fit-content;
     min-width: 16em;
-    min-height: 21.5em;
+    /* min-height: 21.5em; */
     
-    background-image: url("../img/scrolls/scroll-bottom.png");
+    background-image: none;
+    /* background-image: url("../img/scrolls/scroll-bottom.png");
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 .scroll>* {
     padding: var(--edge-spacing);
+}
+
+.scroll>:nth-last-child(1 of h2) {
+    margin-bottom: 0;
 }
 
 .scroll>p {
@@ -33,7 +38,7 @@ h1, h2, #navbar {
     margin-bottom: var(--edge-spacing);
     text-align: center;
     
-    background-image: url("../img/scrolls/scroll-top.png");
+    background-image: url("../img/scrolls/scroll-top.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -48,7 +53,7 @@ li>h2 {
 figure {
     width: 100%;
 
-    background-image: url("../img/scrolls/scroll-bottom.png");
+    background-image: url("../img/scrolls/scroll-bottom.webp");
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;

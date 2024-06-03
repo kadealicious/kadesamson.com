@@ -14,10 +14,11 @@
     background-repeat: no-repeat;
 }
 .scroll>* {
-    padding: 0.4em;
+    padding: var(--edge-spacing);
 }
+
 .scroll>p {
-    margin-bottom: 0.4em;
+    margin-bottom: var(--edge-spacing);
 }
 
 .scroll>ul {
@@ -29,7 +30,7 @@
 
 h1, h2, #navbar {
     padding: 0.2em;
-    margin-bottom:0.4em;
+    margin-bottom: var(--edge-spacing);
     text-align: center;
     
     background-image: url("../img/scrolls/scroll-top.png");
@@ -37,7 +38,7 @@ h1, h2, #navbar {
     background-size: cover;
     background-repeat: no-repeat;
     
-    border: 1px solid black;
+    border: var(--border-size) solid black;
     box-shadow: 0 0.4em 0.2em -0.2em var(--textcolor1);
 }
 li>h2 {
@@ -48,15 +49,26 @@ figure {
     width: 100%;
 
     background-image: url("../img/scrolls/scroll-bottom.png");
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-figure>* {
-    padding: 0.4em;
+figure.wide {
+    padding-bottom: 1em;
+}
+
+figure>*:not(img) {
+    padding: var(--edge-spacing);
+}
+
+figure.wide {
+    padding-bottom: calc(2 * var(--gap-spacing));
+    margin-bottom: calc(2 * calc(var(--edge-spacing) - var(--gap-spacing)));
 }
 
 figure>img {
-    width: 100%;
+    width: calc(100% - calc(2 * var(--edge-spacing)));
+    margin: var(--edge-spacing);
+    border: var(--border-size) solid black;
 }

@@ -1,13 +1,20 @@
-.gallery {
+.gallery-2x1, .gallery-2x2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-gap: 1em;
+    grid-gap: var(--gap-spacing);
     
     position:relative;
 }
 
-.gallery>figure {
-    padding-bottom: 1em;
-    margin-bottom: -0.6em;
+.gallery-2x1 {
+    grid-template-rows: auto;
+}
+
+.gallery-2x2 {
+    grid-template-rows: auto auto;
+}
+
+.gallery-2x2>figure, .gallery-2x1>figure {
+    padding-bottom: var(--gap-spacing);
+    margin-bottom: calc(var(--edge-spacing) - var(--gap-spacing));
 }

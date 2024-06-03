@@ -13,6 +13,11 @@
 
     --accentcolor0: #ffff00;
     --accentcolor1: #bbbb66;
+    
+    /* Spacing variables */
+    --edge-spacing: 0.4em;
+    --gap-spacing: 1em;
+    --border-size: 1px;
 }
 
 ::selection {
@@ -80,7 +85,7 @@ footer {
 }
 
 code {
-    font-family: Consolas;
+    font-family: Consolas, monospace;
 }
 
 h1, h2, h2>a {
@@ -141,7 +146,7 @@ br {
 hr {
     display: block;
     width: 100%;
-    border:0.1em solid var(--bgcolor1);
+    border:var(--border-size) solid var(--bgcolor1);
 }
 
 .nodecor {

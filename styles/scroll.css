@@ -84,12 +84,16 @@ figure>*:not(img) {
     padding: var(--edge-spacing);
 }
 
+figure>*:not(h2) {
+    margin: var(--edge-spacing);
+}
+
 figure.wide {
     padding-bottom: 3.5vw;
 }
 
 figure>img {
-    width: calc(90% - calc(2 * var(--edge-spacing)));
+    width: calc(100% - calc(4 * var(--edge-spacing)));
     margin: var(--edge-spacing) auto;
     border: var(--border-size) solid black;
 }

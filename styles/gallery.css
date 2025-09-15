@@ -14,7 +14,16 @@
     grid-template-rows: auto auto;
 }
 
+@media only screen and (max-width: 600px) {
+	.gallery-2x1 {
+		grid-template-columns: auto;
+	}
+	.gallery-2x2 {
+    		grid-template-columns: auto;
+	}
+}
+
 .gallery-2x2>figure, .gallery-2x1>figure {
-    padding-bottom: var(--gap-spacing);
+    padding-bottom: calc(2 * var(--gap-spacing));
     margin-bottom: calc(var(--edge-spacing) - var(--gap-spacing));
 }

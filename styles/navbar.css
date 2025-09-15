@@ -1,11 +1,34 @@
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    position: fixed;
+    top: 0.2em;
+    z-index: 100;
+}
+
 #navbar {
     width: fit-content;
     margin:var(--edge-spacing);
 
-    position: fixed;
-    top: 0;
+    flex-wrap: nowrap;
+    z-index: 100;
+    gap: 0;
+}
+
+#socialbar {
+    width: fit-content;
+    margin:var(--edge-spacing);
     
     flex-wrap: nowrap;
     z-index: 100;
     gap: 0;
+}
+#socialbar>li {
+    padding: 0;
+}
+#socialbar>li>a>img.icon {
+    width: 1.1em;
+    transform: scale(2);
 }

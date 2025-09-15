@@ -2,10 +2,12 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: baseline;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 
     width: fit-content;
     min-width: 16em;
+    max-width: 100%;
     /* min-height: 21.5em; */
     
     background-image: none;
@@ -33,7 +35,18 @@
     width: 2em;
 }
 
-h1, h2, #navbar {
+a.flag:hover {
+    transform: none;
+}
+img.flag {
+    margin: 0;
+    margin-right:-2.1vh;
+    padding: 0;
+    border: 0;
+    height: 130px;
+}
+
+h1, h2, #navbar, #socialbar {
     padding: 0.2em;
     margin-bottom: var(--edge-spacing);
     text-align: center;
@@ -51,6 +64,10 @@ li>h2 {
 }
 
 figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     width: 100%;
 
     background-image: url("../img/scrolls/scroll-bottom.webp");
@@ -59,8 +76,8 @@ figure {
     background-repeat: no-repeat;
 }
 
-figure.wide {
-    padding-bottom: 1em;
+figure>.flexbreak {
+    height: 100%;
 }
 
 figure>*:not(img) {
@@ -68,12 +85,11 @@ figure>*:not(img) {
 }
 
 figure.wide {
-    padding-bottom: calc(2 * var(--gap-spacing));
-    margin-bottom: calc(2 * calc(var(--edge-spacing) - var(--gap-spacing)));
+    padding-bottom: 3.5vw;
 }
 
 figure>img {
-    width: calc(100% - calc(2 * var(--edge-spacing)));
-    margin: var(--edge-spacing);
+    width: calc(90% - calc(2 * var(--edge-spacing)));
+    margin: var(--edge-spacing) auto;
     border: var(--border-size) solid black;
 }

@@ -7,14 +7,18 @@
 @keyframes changeword {
     0% {
         content: "Software Developer";
+        color: red;
     }
     25% {
         content: "Audio Engineer";
+        color: blue;
     }
     50% {
         content: "Musician";
+        color: green;
     }
     75% {
         content: "Galliant Knight";
+        color: yellow;
     }
 }

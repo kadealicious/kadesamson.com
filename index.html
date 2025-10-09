@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="author" content="Kade Samson">
-    <meta name="description" content="Kade Samson's Personal Portfolio.">
+    <meta name="description" content="Kade Samson's Personal Portfolio Website Extravaganza!">
     <meta name="keywords"
         content="Kade Samson, Software Developer, Software Engineer, Drummer, Guitarist, Bassist, Songwriter, Audio Engineer">
 
@@ -16,10 +16,9 @@
 
     <link type="text/css" rel="stylesheet" href="styles/reset.css">
     <link type="text/css" rel="stylesheet" href="styles/styles.css">
+    <link type="text/css" rel="stylesheet" href="styles/block.css">
     <link type="text/css" rel="stylesheet" href="styles/navbar.css">
-    <link type="text/css" rel="stylesheet" href="styles/scroll.css">
     <link type="text/css" rel="stylesheet" href="styles/textswitch.css">
-    <link type="text/css" rel="stylesheet" href="styles/gallery.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,94 +49,92 @@
             <h1>Kade Samson</h1>
             <h2 class="nowide"><span class="textswitch"></span></h2>
         </figure>
-        <a class="flag" href="#projects"><img class="flag" src="img/onward-squire-waving-flag.gif" alt="Onward, squire!" /></a>
+        <a class="flag" href="#projects"><img class="flag" src="img/onward-squire-waving-flag.webm" alt="Onward, squire!" /></a>
     </header>
 
     <hr />
     
     <section>
-        <h1 id="projects">Software Engineering</h1>
+        <h1 id="projects">Software</h1>
         <div class="gallery-2x2">
-            <figure>
-                <h2><a href="https://docs.domaintools.com/feeds/realtime/userguide/" target="_blank"
-                        rel="noreferrer noopener">RTTF Risk Hot/Full List Generators</a></h2>
-                <h3>Modular risk and passive DNS correlation engine built in Rust.
-            The real-time risk generators are the first production-grade
-            use of Rust at DT, capable of churning through ~650k Kafka
-            messages per second to produce customer-facing risk data.</h3>
-        <div class="flexbreak"></div>
-                <img src="img/domaintools.webp" alt="" style="border:0;">
-            </figure>
+          <figure>
+              <h2><a href="https://docs.domaintools.com/feeds/realtime/userguide/" target="_blank"
+                      rel="noreferrer noopener">RTTF Risk Hot/Full List Generators</a></h2>
+              <h3>Modular risk and passive DNS correlation engine built in Rust.
+          The real-time risk generators are the first production-grade
+          use of Rust at DT, capable of churning through ~650k Kafka
+          messages per second to produce customer-facing risk data.</h3>
+      <div class="flexbreak"></div>
+              <img src="img/domaintools.webp" alt="" style="border:0;">
+          </figure>
 
-            <figure>
-                <h2><a href="https://github.com/Aeronautical-Axolotls/JuiceBox" target="_blank"
-                        rel="noreferrer noopener">JuiceBox</a></h2>
-                <h3>PIC/FLIP fluid simulation built using Rust with the Bevy game
-            engine.  Utilizes a MAC grid for velocity computation, a
-            hashmap for particle collision detection, and batched sprite
-            rendering for visual effects.</h3>
-        <div class="flexbreak"></div>
-                <img src="img/juicebox.webp" alt="Screenshot of JuiceBox!">
-                <!-- <p>
-                    JuiceBox is a hybrid Eulerian/Lagrangian fluid simulation built using the Bevy game 
-                    engine's ECS system and rendering backend.  Built on a team of 4 as a senior capstone 
-                    project at university.
-                </p> -->
-            </figure>
+          <figure>
+              <h2><a href="https://github.com/Aeronautical-Axolotls/JuiceBox" target="_blank"
+                      rel="noreferrer noopener">JuiceBox</a></h2>
+              <h3>PIC/FLIP fluid simulation built using Rust with the Bevy game
+          engine.  Utilizes a MAC grid for velocity computation, a
+          hashmap for particle collision detection, and batched sprite
+          rendering for visual effects.</h3>
+      <div class="flexbreak"></div>
+              <img src="img/juicebox.webp" alt="Screenshot of JuiceBox!">
+              <!-- <p>
+                  JuiceBox is a hybrid Eulerian/Lagrangian fluid simulation built using the Bevy game 
+                  engine's ECS system and rendering backend.  Built on a team of 4 as a senior capstone 
+                  project at university.
+              </p> -->
+          </figure>
 
-            <figure>
-                <h2><a href="https://github.com/farsightsec/mtbl" target="_blank"
-                        rel="noreferrer noopener">MTBL</a></h2>
-                <h3>Immutable SSTable library for passive DNS storage written in
-            C.  Implemented multithreaded write and sort functionality,
-            reducing monthly and yearly compression times by 80%.</h3>
-        <div class="flexbreak"></div>
-                <img src="img/mtbl.webp" alt="">
-            </figure>
-            
-            <figure>
-                <h2>Fun Nuggets!</h2>
-        <div>
-            <h3><a href="https://github.com/kadealicious/img-butler" target="_blank"
-                    rel="noreferrer noopener">img-butler</a></h3>
-            <p>lightweight image manipulator with gesture controls and custom UI integrations</p>
-        </div>
+          <figure>
+              <h2><a href="https://github.com/farsightsec/mtbl" target="_blank"
+                      rel="noreferrer noopener">MTBL</a></h2>
+              <h3>Immutable SSTable library for passive DNS storage written in
+          C.  Implemented multithreaded write and sort functionality,
+          reducing monthly and yearly compression times by 80%.</h3>
+      <div class="flexbreak"></div>
+              <img src="img/mtbl.webp" alt="">
+          </figure>
+          
+          <figure>
+              <h2>Fun Nuggets!</h2>
+      <div>
+          <h3><a href="https://github.com/kadealicious/img-butler" target="_blank"
+                  rel="noreferrer noopener">img-butler</a></h3>
+          <p>lightweight image manipulator with gesture controls and custom UI integrations</p>
+      </div>
 
-                <div>
-                    <h3><a href="https://github.com/kadealicious/aes-encryption" target="_blank"
-                            rel="noreferrer noopener">AES-128</a></h3>
-                    <p>128-bit Advanced Encryption Standard implementation</p>
-                </div>
+              <div>
+                  <h3><a href="https://github.com/kadealicious/aes-encryption" target="_blank"
+                          rel="noreferrer noopener">AES-128</a></h3>
+                  <p>128-bit Advanced Encryption Standard implementation</p>
+              </div>
 
-        <div>
-            <h3><a href="https://github.com/kadealicious/westy-fe" target="_blank"
-                    rel="noreferrer noopener">westy-fe</a></h3>
-            <p>Soon-to-be Rust/wGPU game engine</p>
-                </div>
-                
-                <div>
-                    <h3><a href="https://github.com/kadealicious/Dynamic-C-Array" target="_blank"
-                            rel="noreferrer noopener">Dynamic C Array</a></h3>
-                    <p>Dynamically-allocated C arrays</p>
-                </div>
+      <div>
+          <h3><a href="https://github.com/kadealicious/westy-fe" target="_blank"
+                  rel="noreferrer noopener">westy-fe</a></h3>
+          <p>Soon-to-be Rust/wGPU game engine</p>
+              </div>
+              
+              <div>
+                  <h3><a href="https://github.com/kadealicious/Dynamic-C-Array" target="_blank"
+                          rel="noreferrer noopener">Dynamic C Array</a></h3>
+                  <p>Dynamically-allocated C arrays</p>
+              </div>
 
-                <div>
-                    <h3><a href="https://github.com/kadealicious/QueueBall" target="_blank" rel="noreferrer noopener">QueueBall</a></h3>
-                    <p>Lightweight command queueing in C++</p>
-                </div>
-                
-                <div>
-                    <h3><a href="https://github.com/kadealicious/Better-alert-" target="_blank" rel="noreferrer noopener">Better <code>alert()</code></a></h3>
-                    <p>A better JavaScript <code>alert()</code> function!</p>
-                </div>
-                
-                <div>
-                    <h3><a href="https://github.com/kadealicious/Caloric-Supply-vs-Healthy-Diet-Affordability-Around-The-World" target="_blank" rel="noreferrer noopener">R Graph Viz</a></h3>
-                    <p>ShinyR App for international diet comparisons</p>
-                </div>
-        <div class="flexbreak"></div>
-            </figure>
-        </div>
+              <div>
+                  <h3><a href="https://github.com/kadealicious/QueueBall" target="_blank" rel="noreferrer noopener">QueueBall</a></h3>
+                  <p>Lightweight command queueing in C++</p>
+              </div>
+              
+              <div>
+                  <h3><a href="https://github.com/kadealicious/Better-alert-" target="_blank" rel="noreferrer noopener">Better <code>alert()</code></a></h3>
+                  <p>A better JavaScript <code>alert()</code> function!</p>
+              </div>
+              
+              <div>
+                  <h3><a href="https://github.com/kadealicious/Caloric-Supply-vs-Healthy-Diet-Affordability-Around-The-World" target="_blank" rel="noreferrer noopener">R Graph Viz</a></h3>
+                  <p>ShinyR App for international diet comparisons</p>
+              </div>
+          </figure>
     </section>
 
     <hr />

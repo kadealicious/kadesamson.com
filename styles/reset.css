@@ -1,8 +1,46 @@
-/* Reset! */
+/* Common styling variables. */
 * {
-    margin: 0;
-    padding: 0;
-    z-index: 0;
-    box-sizing: border-box;
-    /* border:1px solid black; */
+  font-family: 'MedievalSharp', cursive;
+  font-weight: 300;
+
+  /* Colors: */
+  --textcolor0: #000000;
+  --textcolor1: #333333;
+
+  --bgcolor0: #dcdec1;
+  --bgcolor1: #abac91;
+  --bgcolor2: #4b4b40;
+
+  --accentcolor0: #ffff00;
+  --accentcolor1: #bbbb66;
+
+  --bordercolor: #000000;
+  
+  /* Spacing: */
+  --edge-spacing-sm: 0.2em;
+  --edge-spacing-med: 0.4em;
+  --gap-spacing: 1em;
+  --border-size: 1px;
+}
+
+/* Reset webpage styling to a cleaner baseline. */
+* {
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  transition: all cubic-bezier(.61, -0.26, 0, 1.5) 0.3s;
+  /* border:1px solid black; */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5em;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  width: 100%;
+  height: fit-content;
 }

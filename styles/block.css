@@ -1,0 +1,48 @@
+/* "Blocks" are contentful containers with a heading and a body.  They are
+ * designed to keep page content clean and organized. */
+
+.block {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: var(--edge-spacing-sm);
+    width: fit-content;
+    background-image: none;
+}
+
+.block>* {
+    padding: var(--edge-spacing-med);
+}
+
+h1, h2 {
+    padding: 0.2em;
+    margin-bottom: var(--edge-spacing-med);
+    text-align: center;
+    
+    background-image: url("../img/scrolls/scroll-top.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    border: var(--border-size) solid black;
+    box-shadow: 0 0.4em 0.2em -0.2em var(--textcolor1);
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+
+    background-image: url("../img/scrolls/scroll-bottom.webp");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+figure>.flexbreak {
+    height: 100%;
+}

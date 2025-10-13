@@ -1,8 +1,14 @@
+import TubeMap from "./TubeMap.js";
+import CritterSpawner from "./Critters.js";
+
 function App() {
   return (
     <div className="app">
-      <p>welcome to tube city!</p>
-    </div>
+      <h1>welcome to tube city!</h1>
+      <TubeMap>
+        <CritterSpawner />
+      </TubeMap>
+    </div >
   );
 }
 

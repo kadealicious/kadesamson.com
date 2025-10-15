@@ -1,15 +1,20 @@
+import { required } from "./common";
+import { ConnectionDirection, chooseStartingDirection, possibleConnections, turnDirection } from "./directions";
+import { collapsePossibilities, gridOpts, isCollapsed, startWaveFunctionCollapse } from "./wavefunction";
+
 /**
   * The `<TubeMap>` element displays a visible set of hamster tubes at varying
   * z-indices on the page.
   *
-  * @param tubeMapOpts - Options that control this `<TubeMap>`, created by the
-  * `tubeMapOpts()` function.
+  * @param opts - Options that control this `<TubeMap>`'s construction and display.
+  *     These options should be created using the `tubeMapOpts()` function.
   * @return - `<TubeMap>` element which can display tubes over and under and
-  * around its parent container!
+  *     around its parent container!
   */
-function TubeMap(tubeMapOpts = tubeMapOpts()) {
-  console.log("creating tube map with opts: " + tubeMapOpts);
-  let tubeMap = generateTubeMap(tubeMapOpts);
+export function TubeMap(props) {
+  const opts = props.tubeMapOpts;
+  console.debug("creating tube map with opts: ", opts);
+  let tubeMap = generateTubeMap(opts);
 
   return (
     <>
@@ -18,54 +23,38 @@ function TubeMap(tubeMapOpts = tubeMapOpts()) {
 }
 
 /**
- * Directions in which a pipe can be connected to another pipe.
- */
-const ConnectionDirections = {
-  None: "none",
-  Left: "left",
-  Right: "right",
-  Up: "up",
-  Down: "down",
-};
+  * Create the default set of options for a `<TubeMap>`.
+  *
+  * @return - A set of options for a `tubeMap` object.  These options are as follows:
+  * `dimensions: number[2]` - How many x and y cells should our `tubeMap` have?
+  * `layerOpts: layerOpts[]` - Configuration for each layer in this `tubeMap`.
+  *     Layers toward the front of the array will appear on top of other layers.
+  */
+export function tubeMapOpts() {
+  return {
+    dimensions: [80, 80],
+    layerOpts: [gridOpts()],
+  };
+}
 
 /**
   * Generate a `TubeMap` object which can be interpreted and displayed by the
   * `<TubeMap>` element.
   *
-  * @param rows - The number of rows in each map layer.
-  * @param cols - The number of columns in each map layer.
-  * @param layerStartCoords - The coordinates at which to start generating each
-  *     layer's tubes.  Each starting coordinate provided will begin a tube
-  *     network layer "behind" the previous coordinate in the array.  The layers
-  *     may have overlapping tubes, but no connections between layers shall occur.
+  * @param opts - `tubeMapOpts` object to use for map generation.
   * @return - A `tubeMap` which can be interpreted by the `<TubeMap>` element.
   */
-function generateTubeMap(rows = 80, cols = 80, layerStartCoords = [[0, 0]]) {
-  let grids = [[]];
-  for (let startingCoord of layerStartCoords) {
-    let isLayerFinished = false;
-    while (!isLayerFinished) {
-      console.log("gay234" + startingCoord);
-      isLayerFinished = true;
+function generateTubeMap(opts = required("opts")) {
+  let tubeMap = [];
+
+  // For each layer, perform a wave function collapse!
+  for (let i = 0; i < opts.layerOpts.length; i++) {
+    let layerOpts = opts.layerOpts[i];
+    let layer = startWaveFunctionCollapse(possibleConnections, layerOpts);
+    while (!isCollapsed(layer)) {
+      layer = collapsePossibilities(layer);
     }
   }
-}
 
-/**
-  * Create the default set of options for a <TubeMap>.  Fields can be modified
-  * by the user once this function has returned its default option set.
-  *
-  * @return - A set of options for a `tubeMap` object.  These options are as follows:
-  * `rows: number` - How many rows should our `tubeMap` have?
-  * `cols: number` - How many columns should our `tubeMap` have?
-  * `border: bool` - Should we display a tube border around the `<TubeMap>` container?
-  */
-function tubeMapOpts() {
-  return {
-    rows: 80,
-    cols: 80,
-    border: true,
-  };
+  return tubeMap;
 }
-
-export default { TubeMap, tubeMapOpts };
